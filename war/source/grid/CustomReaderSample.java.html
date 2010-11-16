@@ -1,0 +1,149 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../js/sh/SyntaxHighlighter.css" type="text/css" />
+<script src="../../js/sh/shCore.js"></script>
+<script src="../../js/sh/shBrushJava.js"></script>
+<style>
+
+* {
+font-family:Courier New,monospace;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.dp-highlighter {
+  white-space: nowrap;
+  overflow: visible;
+  width: 740px;
+  font-size: 11px;
+  font-family:Courier New,monospace;
+}
+</style>
+</head>
+<body>
+<textarea name="code" class="java:nogutter:nocontrols" rows="15" cols="120">
+/*
+ * GWT-Ext Widget Library
+ * Copyright(c) 2007-2008, GWT-Ext.
+ * licensing@gwt-ext.com
+ *
+ * http://www.gwt-ext.com/license
+ */
+
+import com.gwtext.client.data.DataProxy;
+import com.gwtext.client.data.FieldDef;
+import com.gwtext.client.data.HttpProxy;
+import com.gwtext.client.data.Record;
+import com.gwtext.client.data.RecordDef;
+import com.gwtext.client.data.Store;
+import com.gwtext.client.data.StringFieldDef;
+import com.gwtext.client.widgets.Panel;
+import com.gwtext.client.widgets.grid.ColumnConfig;
+import com.gwtext.client.widgets.grid.ColumnModel;
+import com.gwtext.client.widgets.grid.GridPanel;
+import com.gwtextux.client.data.CustomReader;
+import com.gwtextux.client.data.ReaderResult;
+import com.gwtextux.client.data.RemoteResponse;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.RootPanel;
+
+public class CustomReaderSample implements EntryPoint {
+
+	public void onModuleLoad() {
+        Panel panel = new Panel();
+        panel.setBorder(false);
+        panel.setPaddings(15);            
+        
+        GridPanel grid = createGridWithCustomReader();
+        grid.setFrame(true);  
+        grid.setStripeRows(true);  
+        grid.setHeight(350);
+        grid.setWidth(700);
+        grid.setTitle("http://download.finance.yahoo.com/d/quotes.csv?s=INFY+XOM+BBDb.TO+JNJ+MSFT+GOOG+YHOO&f=nd1l1");
+        grid.getView().setForceFit(true);
+        grid.getView().setScrollOffset(0);
+        
+        panel.add(grid);
+        RootPanel.get().add(panel);
+    }
+	
+	private GridPanel createGridWithCustomReader()
+	{
+		GridPanel gridPanel = new GridPanel();
+		
+		RecordDef recordDef = new RecordDef(  
+                new FieldDef[]{  
+                        new StringFieldDef("name"),
+                        new StringFieldDef("lasttrdate"),
+                        new StringFieldDef("lasttrval")
+                }
+        );  
+
+        CustomReader c = new CustomReader(recordDef){
+       		public ReaderResult handleRemoteResponse(
+       			RemoteResponse remoteResponse) {
+       		 
+       			String csvalue = remoteResponse.getResponseText();
+       			String[] lines = csvalue.split("\n");
+	       		Record[] records = new Record[lines.length];
+       		
+    	   		for(int i=0; i&lt;lines.length; ++i)
+       			{
+       				String[] columns = lines[i]. replace('\"', ' ').split(",");
+       				records[i] = this.recordDef.createRecord(columns);
+       			}
+       		
+       			return new ReaderResult(true, records);
+       		}
+        };
+        
+        String url = "http://download.finance.yahoo.com/d/quotes.csv?s=INFY+XOM+BBDb.TO+JNJ+MSFT+GOOG+YHOO&f=nd1l1";
+        DataProxy proxy = new HttpProxy("redirect?url=" + url);
+        
+        Store store = new Store(proxy, c);
+        store.load();
+        gridPanel.setStore(store);
+        
+        ColumnConfig[] columns = new ColumnConfig[]{  
+                new ColumnConfig("Company", "name", 160, true, null, "name"),
+                new ColumnConfig("Last Trade Date", "lasttrdate", 160),
+                new ColumnConfig("Last Trade Value", "lasttrval", 160)
+        };  
+
+        ColumnModel columnModel = new ColumnModel(columns);  
+        gridPanel.setColumnModel(columnModel);  
+
+        return gridPanel;
+    }
+}
+
+
+/*
+The utility servlet Redirect.java has following code to fetch data from a URL and pass it to client.
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	String queryString = request.getQueryString();
+	String address = queryString.split("url=")[1];
+	URL url = new URL(address);
+		
+	PrintStream out = new PrintStream(response.getOutputStream());
+	String inputLine = "";
+	BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
+	while((inputLine = br.readLine()) != null)
+	{
+		// System.out.println(inputLine);
+		out.println(inputLine);
+	}
+		
+	out.close();
+}  	
+*/
+
+</textarea>
+<script language="javascript">
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+</body>
+</html>

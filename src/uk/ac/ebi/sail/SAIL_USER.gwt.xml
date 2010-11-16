@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module rename-to='sail_user'>
+
+      <!-- Inherit the core Web Toolkit stuff.                        -->
+      <inherits name="com.google.gwt.user.User"/>
+      <inherits name='com.gwtext.GwtExt' />
+	  <!--<inherits name="com.gwtextux.GwtExtUx"/> -->
+	<inherits name="com.google.gwt.core.Core"/>
+	<inherits name="com.google.gwt.user.History"/>
+	<inherits name="com.google.gwt.i18n.I18N"/>
+    
+	<!--<inherits name="com.gwtextux.GridSearchPlugin"/> -->
+	<inherits name="com.gwtextux.UploadDialog"/>
+	<!--
+	<inherits name="com.gwtextux.MultiSelect"/>
+    <inherits name="com.gwtextux.ItemSelector"/>
+    <inherits name="com.gwtextux.MultiMonthCalendar"/>
+    <inherits name="com.gwtextux.LiveGrid"/>
+    <inherits name="com.gwtextux.ManagedIFrame"/>
+    
+	<inherits name="com.gwtextux.GridSearchPlugin"/>
+	<inherits name="com.gwtextux.GridSummaryPlugin"/>
+	<inherits name="com.gwtextux.GridCellActionsPlugin"/>
+    <inherits name="com.gwtextux.FileTreePanel"/>
+    <inherits name="com.gwtextux.SwfUploadPanel"/>     
+    --> 
+
+      <!-- Inherit the default GWT style sheet.  You can change       -->
+      <!-- the theme of your GWT application by uncommenting          -->
+      <!-- any one of the following lines.                            -->
+      <!-- <inherits name="com.google.gwt.user.theme.standard.Standard"/>-->
+      <!-- <inherits name="com.google.gwt.user.theme.chrome.Chrome"/> -->
+      <!-- <inherits name="com.google.gwt.user.theme.dark.Dark"/> -->
+
+      <!-- Other module inherits                                      -->
+
+
+      <!-- Specify the app entry point class.                     -->        
+      <entry-point class="uk.ac.ebi.sail.client.SAILUser"/> 
+      <!-- <entry-point class="uk.ac.ebi.sail.client.ui.widget.TestPanel"/> -->
+    
+      <!-- Specify the application specific style sheet.              -->
+      <stylesheet src="../SAIL.css"/>
+      <stylesheet src="../js/ext/resources/css/ext-all.css"/>
+      <!-- <stylesheet src="themes/green/css/xtheme-green.css"/> -->
+
+	
+	<!-- Specify the app entry point class.                   
+	<stylesheet src="js/ext/resources/css/ext-all.css" />
+	<script src="js/ext/adapter/ext/ext-base.js" />
+	<script src="js/ext/ext-all.js" />
+
+	
+    <servlet class="uk.ac.ebi.sail.server.BackendServiceImpl" path="/ReportRequest"/>
+    <servlet class="uk.ac.ebi.sail.server.UploadSvc" path="/UploadSvc"/>
+    <servlet class="uk.ac.ebi.sail.server.DataExportSvc" path="/dataExport"/>
+-->    
+    </module>

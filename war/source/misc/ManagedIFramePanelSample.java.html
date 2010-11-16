@@ -1,0 +1,98 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../js/sh/SyntaxHighlighter.css" type="text/css" />
+<script src="../../js/sh/shCore.js"></script>
+<script src="../../js/sh/shBrushJava.js"></script>
+<style>
+
+* {
+font-family:Courier New,monospace;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.dp-highlighter {
+  white-space: nowrap;
+  overflow: visible;
+  width: 740px;
+  font-size: 11px;
+  font-family:Courier New,monospace;
+}
+</style>
+</head>
+<body>
+<textarea name="code" class="java:nogutter:nocontrols" rows="15" cols="120">
+/*
+ * GWT-Ext Widget Library
+ * Copyright(c) 2007-2008, GWT-Ext.
+ * licensing@gwt-ext.com
+ * 
+ * http://www.gwt-ext.com/license
+ */
+package com.gwtextux.sample.showcase2.client.misc;
+
+import com.gwtext.client.core.EventObject;
+import com.gwtext.client.core.Position;
+import com.gwtext.client.widgets.Button;
+import com.gwtext.client.widgets.Panel;
+import com.gwtext.client.widgets.TabPanel;
+import com.gwtext.client.widgets.ToolbarButton;
+import com.gwtext.client.widgets.event.ButtonListenerAdapter;
+import com.gwtext.client.widgets.layout.FitLayout;
+import com.gwtextux.client.widgets.ManagedIFramePanel;
+import com.gwtextux.sample.showcase2.client.SampleData;
+import com.gwtextux.sample.showcase2.client.ShowcasePanel;
+
+public class ManagedIFramePanelSample extends ShowcasePanel {
+
+    public String getSourceUrl() {
+        return "source/tabs/ManagedIFramePanelSample.java.html";
+    }
+
+    public Panel getViewPanel() {
+        if (panel == null) {
+            panel = new Panel();
+            panel.setLayout(new FitLayout());
+
+            TabPanel tabPanel = new TabPanel();
+            tabPanel.setTabPosition(Position.TOP);
+            tabPanel.setResizeTabs(true);
+            tabPanel.setMinTabWidth(115);
+            tabPanel.setTabWidth(135);
+            tabPanel.setActiveTab(0);
+
+            final ManagedIFramePanel googlePanel = new ManagedIFramePanel("http://www.google.com");
+            googlePanel.setTopToolbar(new ToolbarButton("Refresh", new ButtonListenerAdapter() {
+                public void onClick(Button button, EventObject e) {
+                	googlePanel.refresh();
+                }
+            }));
+
+            Panel staticPanel = new Panel();
+            staticPanel.setTitle("News");
+            staticPanel.setAutoScroll(true);
+            staticPanel.setHtml(SampleData.getBogusMarkup());
+
+            tabPanel.add(googlePanel);
+            tabPanel.add(staticPanel);
+
+            panel.add(tabPanel);
+        }
+        return panel;
+    }
+
+    public String getIntro() {
+        return "<p>This TabPanel demonstrates:</p>" +
+                "    <p>" +
+                "        - Adding a IFrame Panel to a Tab<br>" +
+                "    </p>";
+    }
+}
+</textarea>
+<script class="javascript">
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+</body>
+</html>

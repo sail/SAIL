@@ -1,0 +1,113 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../js/sh/SyntaxHighlighter.css" type="text/css" />
+<script src="../../js/sh/shCore.js"></script>
+<script src="../../js/sh/shBrushJava.js"></script>
+<style>
+
+* {
+font-family:Courier New,monospace;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.dp-highlighter {
+  white-space: nowrap;
+  overflow: visible;
+  width: 700px;
+  font-size: 11px;
+  font-family:Courier New,monospace;
+}
+</style>
+</head>
+<body>
+<textarea name="code" class="java:nogutter:nocontrols" rows="15" cols="120">
+/*  
+ * GWT-Ext Widget Library  
+ * Copyright(c) 2007-2008, GWT-Ext.  
+ * licensing@gwt-ext.com  
+ *  
+ * http://www.gwt-ext.com/license  
+ */  
+  
+package com.gwtext.tutorials.client;   
+
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.gwtext.client.core.Connection;
+import com.gwtext.client.core.ConnectionConfig;
+import com.gwtext.client.core.EventObject;
+import com.gwtext.client.core.RequestParam;
+import com.gwtext.client.core.UrlParam;
+import com.gwtext.client.widgets.Button;
+import com.gwtext.client.widgets.Panel;
+import com.gwtext.client.widgets.Viewport;
+import com.gwtext.client.widgets.event.ButtonListenerAdapter;
+import com.gwtext.client.widgets.tree.AsyncTreeNode;
+import com.gwtext.client.widgets.tree.TreeNode;
+import com.gwtextux.client.widgets.tree.FileTreePanel;
+import com.gwtextux.client.widgets.tree.FileTreePanelOpenAction;
+
+/**
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class FileTreePanelSample implements EntryPoint {
+	public void onModuleLoad() {
+		RootPanel rootPanel = RootPanel.get();
+
+        Panel panel = new Panel();
+
+        final FileTreePanel ftp = new FileTreePanel();
+        ftp.setWidth(240);
+        ftp.setId("ftp");
+        ftp.setHeight(400);
+        ftp.setTitle("FileTreePanel");
+        ftp.setTopMenu(true);
+        ftp.setAutoScroll(true);
+        ftp.setRootPath("root");
+        ftp.setUrl("FileTreeSvc");
+        UrlParam baseParams[]=new UrlParam[2];
+        baseParams[0] = new UrlParam("name1", "value1");
+        baseParams[1] = new UrlParam("name2", "value2");
+        ftp.getLoader().setBaseParams(baseParams);
+
+        ftp.setOpenAction(new FileTreePanelOpenAction(){
+        	public String onOpenNodePath(FileTreePanel fileTreePanel, TreeNode treeNode, String path, String mode){
+        		return path.substring(5);
+        	}
+        });
+        ftp.show();
+        panel.add(ftp);
+        
+        Button resetTree = new Button("Reset Tree", new ButtonListenerAdapter(){
+            public void onClick(Button button, EventObject e) {
+                  ConnectionConfig conCfg = new ConnectionConfig();
+                  conCfg.setUrl("FileTreeSvc");
+                  conCfg.setMethod(Connection.POST);
+
+                  UrlParam[] arrParam2 = { new UrlParam("reset", true) };
+                  RequestParam reqParam = new RequestParam();
+                  reqParam.setParams(arrParam2);
+
+                  Connection con = new Connection(conCfg);
+                  con.request(reqParam);
+                  
+                  AsyncTreeNode aNode = new AsyncTreeNode(ftp.getRootNode().getJsObj());
+                  aNode.reload();
+            }
+        });
+        
+        panel.add(resetTree);
+        
+		//Viewport vport = new Viewport(panel);
+        rootPanel.add(panel);
+	}
+}
+</textarea>
+<script class="javascript">
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+</body>
+</html>

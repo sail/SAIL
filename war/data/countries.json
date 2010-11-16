@@ -1,0 +1,21 @@
+{
+    "totalCount" : 15,
+    "data":
+            [
+            {"abbr":"au", "name" : "Australia", "capital" : "Canberra",  "population" : 18090000, "area" : 7713360},
+            {"abbr":"br", "name" :"Brazil", "capital" : "Brasilia","population" : 170000000, "area" : 8547404},
+            {"abbr":"ca", "name" :"Canada", "capital" : "Ottawa","population" : 31000000, "area" : 9976140},
+            {"abbr":"cn", "name" :"China", "capital" : "Beijing",  "population" : 1222017000, "area" : 9596960},
+            {"abbr":"de", "name" :"Germany", "capital" : "Berlin", "population" : 80942000, "area" : 356910},
+            {"abbr":"fr", "name" :"France", "capital" : "Paris",  "population" : 57571000, "area" : 551500},
+            {"abbr":"in", "name" :"India", "capital" :  "New Delhi",  "population" : 913747000, "area" : 3287590},
+            {"abbr":"sc", "name" :"Seychelles", "capital" : "Victoria",  "population" : 73000, "area" : 280},
+            {"abbr":"us", "name" :"United States", "capital" : "Washington, DC", "population" : 260513000, "area" : 9372610},
+            {"abbr":"jp", "name" :"Japan", "capital" : "Tokyo",  "population" : 125422000, "area" : 377800},
+            {"abbr":"ie", "name" :"Italy", "capital" : "Rome", "population" : 57867000, "area" : 301270},
+            {"abbr":"gh", "name" :"Ghana", "capital" : "Accra", "population" : 16944000, "area" : 238540},
+            {"abbr":"ie", "name" :"Iceland", "capital" : "Reykjavik", "population" : 270000, "area" : 103000},
+            {"abbr":"fi", "name" :"Finland", "capital" : "Helsinki", "population" : 5033000, "area" : 338130},
+            {"abbr":"ch", "name" :"Switzerland", "capital" : "Berne", "population" : 6910000, "area" : 41290}
+                    ]
+}

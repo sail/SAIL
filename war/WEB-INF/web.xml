@@ -4,7 +4,7 @@
 	SAIL</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
-		<welcome-file>SAIL_USER.html</welcome-file>
+		<welcome-file>SAIL.html</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>default.html</welcome-file>
 		<welcome-file>default.htm</welcome-file>
@@ -115,34 +115,18 @@
 		<url-pattern>/sail/DataTemplate</url-pattern>
 	</servlet-mapping>
 
-
-	<security-constraint>
-	 <web-resource-collection>
-	  <web-resource-name>Admin</web-resource-name>
-	  <url-pattern>/SAIL.html</url-pattern>
-	
-	  <http-method>GET</http-method>
-	  <http-method>POST</http-method>
-	 </web-resource-collection>
-	
-	 <auth-constraint>
-	  <role-name>SAILAdmin</role-name>
-	 </auth-constraint>
-	</security-constraint>
-	
-  <login-config>
-    <auth-method>BASIC</auth-method>
-    <realm-name>SAIL Application</realm-name>
-  </login-config>
-
-  <!-- Security roles referenced by this web application -->
-  <security-role>
-    <description>
-      The role that is required to log in to the SAIL
-    </description>
-    <role-name>SAILAdmin</role-name>
-  </security-role>
-
+	<context-param>
+		<param-name>SAIL_DBURL</param-name>
+		<param-value>jdbc:mysql://localhost/sail</param-value>
+	</context-param>
+	<context-param>
+		<param-name>SAIL_DBUserName</param-name>
+		<param-value>sail</param-value>
+	</context-param>
+	<context-param>
+		<param-name>SAIL_DBPassword</param-name>
+		<param-value>password</param-value>
+	</context-param>
 
   <listener>
    <listener-class>uk.ac.ebi.sail.server.WebAppInit</listener-class>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>
+	SAIL</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>SAIL_USER.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>SAILentry</servlet-name>
+		<servlet-class>uk.ac.ebi.sail.server.service.BackendServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SAILentry</servlet-name>
+		<url-pattern>/sail/ReportRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SAILentry</servlet-name>
+		<url-pattern>/sail_user/ReportRequest</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SAILupload</servlet-name>
+		<servlet-class>uk.ac.ebi.sail.server.service.UploadSvc</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SAILupload</servlet-name>
+		<url-pattern>/sail/UploadSvc</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SAILdataExport</servlet-name>
+		<servlet-class>uk.ac.ebi.sail.server.service.DataExportSvc</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>
+		DbUpgrade</display-name>
+		<servlet-name>DbUpgrade</servlet-name>
+		<servlet-class>
+		uk.ac.ebi.sail.server.util.DbUpgrade</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		Servlet for exporting reports in Excel xml format</description>
+		<display-name>ReportExport</display-name>
+		<servlet-name>ReportExport</servlet-name>
+		<servlet-class>uk.ac.ebi.sail.server.service.ReportExport</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>CollectionSummaryExport</display-name>
+		<servlet-name>CollectionSummaryExport</servlet-name>
+		<servlet-class>
+		 uk.ac.ebi.sail.server.service.CollectionSummaryExport
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<description>
+		</description>
+		<display-name>DataTemplateSvc</display-name>
+		<servlet-name>DataTemplateSvc</servlet-name>
+		<servlet-class>
+		 uk.ac.ebi.sail.server.service.DataTemplateSvc
+		</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SAILdataExport</servlet-name>
+		<url-pattern>/sail/dataExport</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SAILdataExport</servlet-name>
+		<url-pattern>/sail_user/dataExport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DbUpgrade</servlet-name>
+		<url-pattern>/DbUpgrade</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ReportExport</servlet-name>
+		<url-pattern>/sail/reportExport</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CollectionSummaryExport</servlet-name>
+		<url-pattern>/sail/CollectionSummaryExport</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReportExport</servlet-name>
+		<url-pattern>/sail_user/reportExport</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CollectionSummaryExport</servlet-name>
+		<url-pattern>/sail_user/CollectionSummaryExport</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DataTemplateSvc</servlet-name>
+		<url-pattern>/sail/DataTemplate</url-pattern>
+	</servlet-mapping>
+
+
+	<security-constraint>
+	 <web-resource-collection>
+	  <web-resource-name>Admin</web-resource-name>
+	  <url-pattern>/SAIL.html</url-pattern>
+	
+	  <http-method>GET</http-method>
+	  <http-method>POST</http-method>
+	 </web-resource-collection>
+	
+	 <auth-constraint>
+	  <role-name>SAILAdmin</role-name>
+	 </auth-constraint>
+	</security-constraint>
+	
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>SAIL Application</realm-name>
+  </login-config>
+
+  <!-- Security roles referenced by this web application -->
+  <security-role>
+    <description>
+      The role that is required to log in to the SAIL
+    </description>
+    <role-name>SAILAdmin</role-name>
+  </security-role>
+
+
+  <listener>
+   <listener-class>uk.ac.ebi.sail.server.WebAppInit</listener-class>
+  </listener>
+</web-app>

@@ -1,0 +1,133 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../js/sh/SyntaxHighlighter.css" type="text/css" />
+<script src="../../js/sh/shCore.js"></script>
+<script src="../../js/sh/shBrushJava.js"></script>
+<style>
+
+* {
+font-family:Courier New,monospace;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.dp-highlighter {
+  white-space: nowrap;
+  overflow: visible;
+  width: 650px;
+  font-size: 11px;
+  font-family:Courier New,monospace;
+}
+</style>
+</head>
+<body>
+<textarea name="code" class="java:nogutter:nocontrols" rows="15" cols="120">
+/*
+ * GWT-Ext Widget Library
+ * Copyright(c) 2007-2008, GWT-Ext.
+ * licensing@gwt-ext.com
+ *
+ * http://www.gwt-ext.com/license
+ */
+
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.gwtext.client.core.EventObject;
+import com.gwtext.client.widgets.*;
+import com.gwtext.client.widgets.event.ButtonListenerAdapter;
+import com.gwtext.client.widgets.form.FormPanel;
+import com.gwtext.client.widgets.form.ItemSelector;
+import com.gwtext.client.widgets.form.TextField;
+
+public class ItemSelectorSample implements EntryPoint {
+
+    public void onModuleLoad() {
+        Panel panel = new Panel();
+        panel.setBorder(false);
+        panel.setPaddings(15);
+
+        final FormPanel formPanel = new FormPanel();
+        formPanel.setTitle("Team Selection");
+        formPanel.setFrame(true);
+        formPanel.setPaddings(5, 0, 5, 5);
+        formPanel.setWidth(520);
+        formPanel.setLabelWidth(75);
+        formPanel.add(new TextField("Team", "team", 230));
+
+        final ItemSelector itemSelector = new ItemSelector();
+        itemSelector.setFieldLabel("Players");
+        itemSelector.setName("players");
+        itemSelector.setDataFields(new String[]{"playerID", "name"});
+        itemSelector.setFromData(new Object[][]{
+                new Object[]{"1", "Player One"},
+                new Object[]{"2", "Player Two"},
+                new Object[]{"3", "Player Three"},
+                new Object[]{"4", "Player Four"},
+                new Object[]{"5", "Player Five"}
+        });
+        itemSelector.setToData(new Object[][]{
+                new Object[]{"6", "Player Six"}
+        });
+        itemSelector.setMsWidth(160);
+        itemSelector.setMsHeight(200);
+
+        itemSelector.setValueField("playerID");
+        itemSelector.setDisplayField("name");
+
+        //can also assign legends
+        //itemSelector.setToLegend("Selected");
+        //itemSelector.setFromLegend("Available");
+
+        Toolbar fromToolbar = new Toolbar();
+        ToolbarButton addButton = new ToolbarButton();
+        addButton.setDisabled(true);
+        addButton.setIconCls("user-add-icon");
+        fromToolbar.addButton(addButton);
+        fromToolbar.addSpacer();
+        fromToolbar.addItem(new ToolbarTextItem("Available"));
+        itemSelector.setFromToolbar(fromToolbar);
+
+        Toolbar toToolbar = new Toolbar();
+        ToolbarButton clearButton = new ToolbarButton("Clear");
+        clearButton.setIconCls("user-delete-icon");
+        clearButton.addListener(new ButtonListenerAdapter() {
+            public void onClick(Button button, EventObject e) {
+                itemSelector.reset();
+            }
+        });
+        toToolbar.addButton(clearButton);
+        itemSelector.setToToolbar(toToolbar);
+
+        formPanel.add(itemSelector);
+
+        Button values = new Button("Get Value", new ButtonListenerAdapter() {
+            public void onClick(Button button, EventObject e) {
+                super.onClick(button, e);
+
+                String values = formPanel.getForm().getValues();
+                System.out.println("Form data : " + values);
+            }
+        });
+        formPanel.addButton(values);
+
+        Button markInvalid = new Button("Mark Invalid", new ButtonListenerAdapter() {
+            public void onClick(Button button, EventObject e) {
+                itemSelector.markInvalid("Invalid");
+            }
+        });
+
+        formPanel.addButton(markInvalid);
+
+        panel.add(formPanel);
+
+        RootPanel.get().add(panel);
+    }
+}
+</textarea>
+<script class="javascript">
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+/** Add css rules here for your application. 
+body {
+  font-family:arial,sans-serif
+}
+*/
+div,td {
+  color:#000000
+}
+
+a:link {
+  color:#0000cc
+}
+     
+a:visited {
+  color:#551a8b
+}
+
+a:active {
+  color:#ff0000
+}
+
+/**
+button {
+  display: block;
+  font-size: 16pt
+}
+
+
+.widePanel {
+  width: 100%
+}
+
+img {
+  margin-top: 20px;
+}
+*/
+
+.x-form-text-X { height: 18px !important; padding-top: 0px !important }
+
+.removeditem {
+text-decoration: line-through;
+}
+
+.newitem {
+color: navy;
+}
+
+ul.filterDesc { list-style-type: disc; padding-left: 2em }
+
+.andNodeExternal { background-repeat: x-repeat; background-image: url("images/icons/hline-red-tp.png") }
+.andNodeInternal {  }
+.orNodeExternal { background-repeat: x-repeat; background-image: url("images/icons/hline-green-tp.png") }
+.orNodeInternal {  }
+
+.totalLbl { font-size: 20pt;}
+.lblval  { font-size1: 20pt;}
+.lblhdr  { font-size1: 18pt; background-color: inherit;}
+td.cellhdr  div.x-panel-body { background-color: #CCDDFF; background: #CCDDFF !important  }
+.tablePanel div { border: 0;  background-color: inherit !important; font-size1: 10pt;  }
+.cellhdr { background-color: #CCDDFF; border: 1px solid black;padding: 1em;}
+.cellval { border: 1px solid black;  text-align: center; padding: 1em; }
+
+.cellhdrX { background-color: #CCDDFF; border: 1px solid black; padding: 1em;}
+.cellvalX { border: 1px solid black; padding: 1em; text-align: center; }
+
+.reportTable { background-color: inherit !important; border: 0; }
+.reportTable table { border-collapse: separate;  border-spacing: 1px !important; width: auto }
+
+.cellPanel { padding: 15px; background-color: inherit !important }
+.cellPanel div { background-color: inherit !important }
+
+div.report-tab div.x-panel-body { background-color: #e8f5ff; text-align: center;}
+div.report-tab div.x-panel-body div { background: transparent; text-align: left}
+div.report-tab table.x-table-layout { margin: auto }
+
+.reportTable2 td { padding: 0em; border: 1px solid; }
+
+.reportTable2 td div { background-color: transparent !important; text-align: center }
+
+.reportTable2 { background-color: inherit !important; border: 0 }
+.reportTable2 table { border-collapse: collapse;  border-spacing: 1px !important; width: auto; border: 2px solid black; margin: 5px }
+
+.cellCollectionNameHeader { background-color: #9ba9bf !important;}
+.cellCollectionCounterHeader { background-color: #9bb3bf !important;}
+.cellParameterHeader { background-color: #9babbf !important; min-width: 90px }
+.cellResultHeader { background-color: #345c8c !important;}
+.cellCollectionName { background-color: #bacbe5 !important;}
+.cellCollectionCount { background-image: url("images/collection_cell_bg.png"); background-repeat: repeat-y;}
+.cellParameterCount { padding: 0; background-image: url("images/param_cell_bg.png"); background-repeat: repeat-y;}
+.cellResultCount { background-image: url("images/result_cell_bg.png"); background-repeat: repeat-y; text-align: right;}
+.cellSummaryHeader { background-color: #244061 !important;}
+.cellCollectionSummary { background-color: #244061 !important;}
+.cellParameterSummary { background-color: #244061 !important;}
+.cellResultSummary { background-color: #1c334d !important;}
+
+.counterCell { background-color: white }
+.counterCell div  {text-align: right !important;}
+.hHeader { border-bottom: 2px solid black !important; font-weight: bold; }
+.vHeader { border-right: 2px solid black !important; font-weight: bold; }
+.hSummary { border-top: 2px solid black !important;}
+.vSummary { border-left: 2px solid black !important;}
+.cellResultHeader div, .hSummary div, .vSummary div { color: white !important; font-weight: bold; }
+
+.boldLeftBorder { border-left: 2px solid !important}
+.boldTopBorder { border-top: 2px solid !important}
+.doubleLeftBorder { border-left: 3px double !important}
+.doubleTopBorder { border-top: 3px double !important}
+
+.orTopBorder { border-top-color: green !important; }
+.andTopBorder { border-top-color: red  !important;}
+
+.orBorder { border-left-color: green !important; }
+.andBorder { border-left-color: red  !important;}
+
+.andOpText { background-color: red; color: white }
+.orOpText { background-color: green; color: white  }
+.anyOpText { background-color: blue; color: white  }
+
+.sail-form-panel div { background-color1: #DDEEFF }
+.sail-form-panel td { padding: 10px; background-color1: #DDEEFF }
+
+td.objOwned div {font-weight: bold; color: navy}
+
+table.paramexport { empty-cells: show; border-collapse: collapse; }
+table.paramexport td { border: 1px solid black}
+
+/*.treeParameterNodeIcon { background-image: url("js/api/images/dark-blue-circle.png")}*/
+.baseParameterNode { background-image: url("js/api/images/dark-green-circle.png") !important }
+.derivedParameterNode { background-image: url("js/api/images/dark-blue-circle.png") !important }
+.multyDerivedParameterNode { background-image: url("js/api/images/dark-red-circle.png") !important }
+.invisibleParameterNode { background-image: url("images/icons/empty-circle.png") !important }
+
+.variableNode { background-image: url("js/api/images/dark-green-circle.png") !important }
+.qualifierNode { background-image: url("js/api/images/dark-blue-circle.png") !important }
+
+.nobg { background-image: url("xxx") !important }
+.orIcon { background-image: url("images/icons/or.png") !important }
+.andIcon { background-image: url("images/icons/and.png") !important }
+.filteredIcon { background-image: url("images/icons/bogus-filter.png") !important }
+.paramIcon { background-image: url("images/icons/bogus.png") !important }
+.groupIcon { background-image: url("images/silk/application_cascade.gif") !important }
+.splitIcon { background-image: url("images/silk/chart_organisation.gif") !important }
+.filteredSplitIcon { background-image: url("images/icons/split-filter.png") !important }
+.relationIcon { background-image: url("images/icons/relation.png") !important }
+.rootNodeIcon { background-image: url("images/icons/sail_logo.png") !important }
+.extraIcon { background-image: url("js/ext/examples/desktop/images/gears.png") !important }
+.paramAddIcon { background-image: url("images/icons/paramAdd.png") !important }
+.paramEditIcon { background-image: url("images/icons/paramEdit.png") !important }
+.paramsExport { background-image: url("images/icons/paramsExport.png") !important }
+.paramExport { background-image: url("images/icons/paramExport.png") !important }
+.cleanIcon { background-image: url("images/icons/clean.png") !important }
+.deleteIcon { background-image: url("js/ext/examples/feed-viewer/images/delete.gif") !important }
+.upIcon { background-image: url("images/icons/arrow-up.gif") !important }
+.downIcon { background-image: url("images/icons/arrow-down.gif") !important }
+.scienceIcon { background-image: url("images/icons/science2.png") !important }
+.listIcon { background-image: url("images/silk/application_view_list.gif") !important }
+.treeIcon { background-image: url("images/icons/expand-all.gif") !important }
+.hierIcon { background-image: url("images/icons/hierarchy.png") !important }
+.viewIcon { background-image: url("images/icons/eye.png") !important }
+.editFilterIcon { background-image: url("images/icons/funnelEdit.png") !important }
+.editIcon { background-image: url("images/icons/pencil.png") !important }
+.infoIcon { background-image: url("images/silk/information.gif") !important }
+.constructIcon { background-image: url("images/icons/bricks.png") !important }
+.summaryIcon { background-image: url("images/icons/application_view_list.png") !important }
+.reportIcon { background-image: url("images/icons/table.png") !important }
+.variableIcon { background-image: url("images/icons/V.png") !important }
+.qualifierIcon { background-image: url("images/icons/Q.png") !important }
+.parameterIcon { background-image: url("js/ext/resources/images/default/tree/leaf.gif") !important }
+.bulletIcon { background-image: url("images/icons/bullet.png") !important }
+.rangeIcon { background-image: url("images/icons/range.png") !important }
+.tagIcon { background-image: url("images/icons/tag_orange.png") !important }
+.classifierIcon { background-image: url("images/icons/color_swatch.png") !important }
+.trueIcon { background-image: url("images/icons/accept.png") !important }
+.falseIcon { background-image: url("images/icons/delete.png") !important }
+.dontcareIcon { background-image: url("images/icons/dontcare.png") !important }
+.datesIcon { background-image: url("images/icons/calendar.png") !important }
+.dataTemplateIcon { background-image: url("images/icons/database_gear.png") !important }
+.predefinedQueryIcon { background-image: url("images/icons/fam/asterisk_orange.png") !important }
+.addPredefQueryIcon { background-image: url("images/icons/fam/addPredef.png") !important }
+.addPredefQuery2GrpIcon { background-image: url("images/icons/fam/addPredefToGroup.png") !important }
+
+.bigWaitIcon { background-image: url("images/icons/sandtimerSmall.png") !important; background-repeat: no-repeat; }
+
+.arrowDown { background-image: url("images/icons/down.png") !important }
+.arrowLeft { background-image: url("images/icons/left.png") !important }
+
+.zoomIn { background-image: url("images/icons/ZoomIn.png") !important }
+.zoomOut { background-image: url("images/icons/ZoomOut.png") !important }
+
+.exportXL { background-image: url("images/icons/page_white_excel.png") !important }
+.exportCSV { background-image: url("images/icons/table.png") !important }
+
+.RequestTree  { background-color: white !important; background-image: url("images/sail_logo_bg.png") !important; background-repeat: no-repeat }
+.andSeparator spanX { background-color: red !important; color: white !important;  font-style: italic; font-size: 6pt !important; }
+.orSeparator spanX { background-color: green !important; color: white !important; font-style: italic; font-size: 6pt !important; }
+
+.infoPanel { padding: 30px}
+
+.collectionAnnot { background-color: navy; color: white }
+.collectionInfo { background-color: #1d78a2; }
+.collectionTotalInfo { background-color: #379ecd; }
+.collectionParamInfo { background-color: #1165d7; }
+.selectionCollectionInfo { background-color: #297d7a; }
+
+.roundBoxHeader { height: 20px }
+.roundBoxFooter { height: 20px }
+.roundBoxLT { background-image: url(images/corners/UL-seg-t.png); width: 20px; padding: 0}
+.roundBoxT { background-image: url(images/corners/T-lin-t.png); background-repeat: x-repeat;}
+.roundBoxRT { background-image: url(images/corners/UR-seg-t.png); width: 20px; padding: 0}
+.roundBoxL { background-image: url(images/corners/L-lin-t.png); background-repeat: y-repeat;}
+.roundBoxR { background-image: url(images/corners/R-lin-t.png); background-repeat: y-repeat;}
+.roundBoxLB { background-image: url(images/corners/LL-arc-t.png)}
+.roundBoxB { background-image: url(images/corners/B-lin-t.png);background-repeat: x-repeat;}
+.roundBoxRB { background-image: url(images/corners/LR-arc-t.png)}
+
+.collectionInfoParamTbl, .collectionInfoCollectionTbl { border: 1px solid black; border-collapse: collapse }
+.collectionInfoParamTbl th { text-align: center; font-size: larger; border: 1px solid black; padding: 0.6em   }
+.collectionInfoParamTbl td { border: 1px solid black; padding: 0.6em }
+.collectionInfoRecCount, .collectionInfoTagCount { text-align: right; background-color: #c6d8f2}
+th.collectionInfoParamHdr { background-color: #4b91c2; border-right: 0 }
+.collectionInfoRecHdr { background-color: #4b7bc2 }
+.collectionInfoTagRecHdr { background-color: #4b7bc2 }
+td.collectionInfoParamName { background-color: #c3e1f6; text-align: center;  border-right: 0 }
+
+td.collectionInfoParameterVariant { background-color: #d4edfe; border-left: 1px solid #d4edfe !important }
+td.collectionInfoParameterCount { background-color: #d4edfe; text-align: right; }
+td.collectionInfoParameterTagCount { background-color: #d4edfe; text-align: right; }
+td.collectionInfoVariantName { text-align: right; background-color: #c5def0; font-size: 10pt; padding: 2px; border-top: 1px dotted black; border-bottom: 1px dotted black}
+td.collectionInfoVariantRecCount { text-align: right; background-color: #e8eff9; font-size: 10pt; padding: 2px; border-top: 1px dotted black; border-bottom: 1px dotted black}
+td.collectionInfoVariantTagCount { text-align: right; background-color: #e8eff9; font-size: 10pt; padding: 2px; border-top: 1px dotted black; border-bottom: 1px dotted black}
+th.collectionInfoParamHdrFiller { background-color: #4b91c2; border-left: 0; font-size: 10pt; }
+th.collectionInfoParamPartHdr {background-color: #8ecbe7; padding: 2px; font-size: 10pt; font-weight: bold }
+th.collectionInfoParamVariHdr {background-color: #9bd4ee; padding: 2px; font-size: 10pt; font-weight: bold }
+td.collectionInfoParameterFiller { background-color: #c3e1f6; border-left: 0 }
+td.collectionInfoPartName {background-color: #b5d4e9; padding: 2px; font-size: 10pt; text-align: center; font-weight: bold}
+
+.collectionInfoCollectionTbl th { text-align: center; font-size: larger  }
+.collectionInfoCollectionHdr { background-color: #4b91c2 }
+.collectionInfoCollectionTbl td { border: 1px solid black; padding: 0.6em }
+.collectionInfoCollectionHdr { background-color: #4b91c2 }
+.collectionInfoCollectionName { background-color: #d4edfe; text-align: center }
+.collectionInfoCollectionTbl a { color: blue }
+.collectionInfoCollectionTbl a:visited { color: blue }
+
+.studyAnnot { background-color: navy; color: white }
+.studyInfo { background-color: #1d78a2; }
+.studyTotalInfo { background-color: #379ecd; }
+.studyParamInfo { background-color: #1165d7; }
+.studyCollections { background-color: #298582; }
+.studySamples { background-color: #2d2985; color: white }
+
+.studyInfoParamTbl, .studyInfoCollectionTbl { border: 1px solid black; border-collapse: collapse }
+
+.studyInfoParamTbl th { text-align: center; font-size: larger  }
+.studyInfoParamTbl td, th { border: 1px solid black; padding: 0.6em }
+.studyInfoRecCount, .studyInfoTagCount { text-align: right; background-color: #e3eeff}
+.studyInfoParamHdr { background-color: #4b91c2 }
+.studyInfoRecHdr { background-color: #4b7bc2 }
+.studyInfoTagRecHdr { background-color: #4b7bc2 }
+.studyInfoParamName { background-color: #d4edfe; text-align: center }
+
+.studyInfoCollectionTbl th { text-align: center; font-size: larger  }
+.studyInfoCollectionTbl td, th { border: 1px solid black; padding: 0.6em }
+.studyInfoCollectionHdr { background-color: #4b91c2 }
+.studyInfoRecHdr { background-color: #4b7bc2 }
+.studyInfoTagRecHdr { background-color: #4b7bc2 }
+.studyInfoCollectionName { background-color: #d4edfe; text-align: center }
+.studyInfoCollectionName a { color: blue }
+.studyInfoCollectionName a:visited { color: blue }
+
+.percentage { margin-left: 3px; font-size: x-small}

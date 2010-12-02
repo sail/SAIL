@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response success="true">
+    <contact>
+        <name>
+            <first>Sanjiv</first>
+            <last>Jivan</last>
+        </name>
+        <company>foo bar</company>
+        <email>sanjiv.jivan@gmail.com</email>
+        <state>MA</state>
+        <dob>04/15/2007</dob>
+    </contact>
+</response>

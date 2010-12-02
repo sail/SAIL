@@ -1,0 +1,93 @@
+<html>
+<head>
+<link rel="stylesheet" href="../../js/sh/SyntaxHighlighter.css" type="text/css" />
+<script src="../../js/sh/shCore.js"></script>
+<script src="../../js/sh/shBrushJava.js"></script>
+<style>
+
+* {
+font-family:Courier New,monospace;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.dp-highlighter {
+  white-space: nowrap;
+  overflow: visible;
+  width: 700px;
+  font-size: 11px;
+  font-family:Courier New,monospace;
+}
+</style>
+</head>
+<body>
+<textarea name="code" class="java:nogutter:nocontrols" rows="15" cols="120">
+/*  
+ * GWT-Ext Widget Library  
+ * Copyright(c) 2007-2008, GWT-Ext.  
+ * licensing@gwt-ext.com  
+ *  
+ * http://www.gwt-ext.com/license  
+ */  
+  
+package com.gwtext.tutorials.client;   
+
+package com.onlineassets.client;
+
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.JavaScriptObject;
+import com.google.gwt.user.client.ui.RootPanel;
+import com.gwtext.client.util.JavaScriptObjectHelper;
+import com.gwtext.client.widgets.Panel;
+import com.gwtextux.client.widgets.upload.SwfUploadPanel;
+import com.gwtextux.client.widgets.upload.SwfUploadPanelListenerAdapter;
+
+
+/**
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class SwfUploadPanelSample implements EntryPoint {
+	public void onModuleLoad() {
+		RootPanel rootPanel = RootPanel.get();
+
+        Panel panel = new Panel();
+
+    	SwfUploadPanel swfpanel = new SwfUploadPanel();
+    	swfpanel.setHeight(300);
+    	swfpanel.setWidth(500);
+    	swfpanel.setTitle("SwfUploadPanel");
+    	swfpanel.setUploadUrl("UploadSvc");
+    	swfpanel.setFlashUrl("js/swfuploadpanel/swfupload_f9.swf");
+    	swfpanel.addListener(new SwfUploadPanelListenerAdapter(){
+    		public void onFileQueued(SwfUploadPanel swfUploadPanel, String filename) {
+    			System.out.println("onFileQueued. File='" + filename);
+    		}
+
+    		public void onFileUploadComplete(SwfUploadPanel swfUploadPanel,
+    				String filename, JavaScriptObject response) {	
+    			System.out.println("onFileUploadComplete. File='" + filename + "'.");
+    			System.out.println("onFileUploadComplete. response='" + JavaScriptObjectHelper.getAttribute(response, "code") + "'. ");
+    		}
+
+    		public void onQueueUploadComplete(SwfUploadPanel swfUploadPanel) {
+    			System.out.println("onQueueUploadComplete event fired...");
+    		}
+
+    		public void onSwfUploadLoaded(SwfUploadPanel swfUploadPanel) {
+    			System.out.println("onSwfUploadLoaded event fired...");
+    		}         
+    	});
+    	swfpanel.show();
+    	panel.add(swfpanel);
+
+        rootPanel.add(panel);
+	}
+}
+</textarea>
+<script class="javascript">
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+</body>
+</html>

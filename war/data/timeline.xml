@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<event start="4000 BC" end="3200 BC" isDuration="true"
+		title="Winterbourne Stoke Long Barrow" icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://www.english-heritage.org.uk/stonehengeinteractivemap/sites/winterbourne_stoke/02.html" title="English Heritage"&gt;
+        English Heritage
+        &lt;img id="link" src="site/image/yellow-circle.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+	</event>
+	<event start="3000 BC" end="2500 BC" isDuration="true"
+		title="Winterbourne Stoke Round Barrows" icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://www.english-heritage.org.uk/stonehengeinteractivemap/sites/winterbourne_stoke/02.html" title="English Heritage"&gt;
+        English Heritage
+        &lt;img id="link" src="site/image/yellow-circle.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+	</event>
+	<event start="3000 BC" end="2500 BC" isDuration="true" title="King Barrows"
+		icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://www.english-heritage.org.uk/stonehengeinteractivemap/sites/king_barrow_ridge/01.html" title="English Heritage"&gt;
+        English Heritage
+        &lt;img id="link" src="site/image/yellow-circle.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+	</event>
+	<event start="2500 BC" end="1600 BC" isDuration="true"
+		title="Normanton Down Barrows" icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://www.english-heritage.org.uk/stonehengeinteractivemap/sites/normanton/01.html" title="English Heritage"&gt;
+        English Heritage
+        &lt;img id="link" src="site/image/yellow-circle.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+	</event>
+
+	<event start="3100 BC" title="The Cursus" icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://www.english-heritage.org.uk/stonehengeinteractivemap/sites/cursus/01.html" title="English Heritage"&gt;
+        English Heritage
+        &lt;img id="link" src="site/image/yellow-circle.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+
+        &lt;a href="http://en.wikipedia.org/wiki/Cursus" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        Cursus was a name given by early British archaeologists such as William Stukeley to the large parallel lengths of banks with external ditches which they thought were early Roman athletics tracks, hence the Latin name 'Cursus', meaning 'Circus'. Cursus monuments are now understood to be Neolithic structures and may have been of ceremonial function.
+	</event>
+	<event start="3100 BC" end="2400 BC" isDuration="true" title="Durrington Walls"
+		icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://www.english-heritage.org.uk/stonehengeinteractivemap/sites/durrington_walls/01.html" title="English Heritage"&gt;
+        English Heritage
+        &lt;img id="link" src="site/image/yellow-circle.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+	</event>
+	<event start="2600 BC" end="1700 BC" isDuration="true" title="The Avenue"
+		icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://www.english-heritage.org.uk/stonehengeinteractivemap/sites/avenue/01.html" title="English Heritage"&gt;
+        English Heritage
+        &lt;img id="link" src="site/image/yellow-circle.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+	</event>
+	<event start="2300 BC" end="2000 BC" isDuration="true" title="Woodhenge"
+		icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Woodhenge" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        Woodhenge is a Neolithic Class I henge and timber circle monument located to the North of Amesbury in Wiltshire, England, and it is closer to Amesbury than is Stonehenge.
+	</event>
+	<event start="1100 BC" end="500 BC" isDuration="true" title="Vespasian's Camp"
+		icon="../image/green-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://www.english-heritage.org.uk/stonehengeinteractivemap/sites/vespasians_camp/01.html" title="English Heritage"&gt;
+        English Heritage
+        &lt;img id="link" src="site/image/yellow-circle.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+	</event>
+
+	<event start="2900 BC" end="2700 BC" title="Phase 1 - Earthwork Enclosure"
+		icon="../image/blue-circle.png" image="../image/Timeline_Logo_Thumb.png">
+	</event>
+	<event start="2900 BC" end="2400 BC" title="Phase 2 - Wooden Structures"
+		icon="../image/blue-circle.png" image="../image/Timeline_Logo_Thumb.png">
+	</event>
+	<event start="2600 BC" end="1600 BC" title="Phase 3 - Stone Circle "
+		icon="../image/blue-circle.png" image="../image/Timeline_Logo_Thumb.png">
+	</event>
+
+	<event start="3100 BC" title="Stonehenge 1" icon="../image/red-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Stonehenge#Stonehenge_1" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        The first monument consisted of a circular bank and ditch enclosure.
+	</event>
+	<event start="3000 BC" title="Stonehenge 2" icon="../image/red-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Stonehenge#Stonehenge_2" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        Evidence of the second phase is no longer visible. It appears from the number of postholes dating to this period that some form of timber structure was built within the enclosure during the early 3rd millennium BC.
+	</event>
+	<event start="2600 BC" title="Stonehenge 3 I" icon="../image/red-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Stonehenge#Stonehenge_3_I" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        Archaeological excavation has indicated that around 2600 BC, timber was abandoned in favour of stone and two concentric crescents of holes (called the Q and R Holes) were dug in the centre of the site.
+	</event>
+	<event start="2440 BC" end="2100 BC" title="Stonehenge 3 II"
+		icon="../image/red-circle.png" image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Stonehenge#Stonehenge_3_II" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        The next major phase of activity at the tail end of the 3rd millennium BC saw 30 enormous sarsen stones brought from a quarry around 24 miles (40 km) north to the site on the Marlborough Downs.
+	</event>
+	<event start="2100 BC" title="Stonehenge 3 III" icon="../image/red-circle.png"
+		image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Stonehenge#Stonehenge_3_III" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        Later in the Bronze Age, the bluestones appear to have been re-erected for the first time, although the precise details of this period are still unclear.
+	</event>
+	<event start="2280 BC" end="1930 BC" title="Stonehenge 3 IV"
+		icon="../image/red-circle.png" image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Stonehenge#Stonehenge_3_IV" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        This phase saw further rearrangement of the bluestones as they were placed in a circle between the two settings of sarsens and in an oval in the very centre. Some archaeologists argue that some of the bluestones in this period were part of a second group brought from Wales.
+	</event>
+	<event start="2270 BC" end="1930 BC" title="Stonehenge 3 V"
+		icon="../image/red-circle.png" image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Stonehenge#Stonehenge_3_V" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        Soon afterwards, the north eastern section of the Phase 3 IV Bluestone circle was removed, creating a horseshoe-shaped setting termed the Bluestone Horseshoe.
+	</event>
+	<event start="1930 BC" end="1600 BC" title="Stonehenge 3 VI"
+		icon="../image/red-circle.png" image="../image/Timeline_Logo_Thumb.png">
+        &lt;a href="http://en.wikipedia.org/wiki/Stonehenge#Stonehenge_3_VI" title="Wikipedia article"&gt;
+        &lt;img id="link" src="site/image/Wiki_letter_w.png" border="0"&gt;&lt;/img&gt;&lt;/a&gt;
+        Two further rings of pits were dug outside the outermost sarsen circle.
+	</event>
+
+</data>

@@ -1,0 +1,33 @@
+
+
+<countries>
+    <continent title="North America" allowDrag="false">
+        <country title="United States" icon="images/flags/us.gif" iconCls="tree-flag"/>
+        <country title="Canada" icon="images/flags/ca.gif" iconCls="tree-flag" />
+    </continent>
+
+    <continent title="South America" allowDrag="false">
+        <country title="Brazil" icon="images/flags/br.gif" iconCls="tree-flag"/>
+    </continent>
+
+    <continent title="Asia" allowDrag="false">
+        <country title="India" icon="images/flags/in.gif" iconCls="tree-flag"/>
+        <country title="China" icon="images/flags/cn.gif" iconCls="tree-flag"/>
+        <country title="Japan" icon="images/flags/jp.gif" iconCls="tree-flag"/>
+    </continent>
+
+    <continent title="Europe" allowDrag="false">
+        <country title="Germany" icon="images/flags/de.gif" iconCls="tree-flag"/>
+        <country title="France" icon="images/flags/fr.gif" iconCls="tree-flag"/>
+        <country title="Italy" icon="images/flags/ie.gif" iconCls="tree-flag"/>
+        <country title="Finland" icon="images/flags/fi.gif" iconCls="tree-flag"/>
+    </continent>
+
+    <continent title="Africa" allowDrag="false">
+        <country title="Seychelles" icon="images/flags/sc.gif" iconCls="tree-flag"/>
+    </continent>
+
+    <continent title="Australia">
+        <country title="Australia" icon="images/flags/au.gif" iconCls="tree-flag"/>
+    </continent>
+</countries>

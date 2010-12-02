@@ -1,0 +1,9 @@
+
+<vacations>
+    <trip title="Trip1" allowDrag="false" trip="true">
+    </trip>
+    <trip title="Trip2" allowDrag="false" trip="true">
+    </trip>
+    <trip title="Trip3" allowDrag="false" trip="true">
+    </trip>
+</vacations>

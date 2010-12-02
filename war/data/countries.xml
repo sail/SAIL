@@ -1,0 +1,22 @@
+<countries>
+    <team title="Iceland" qtip="Team Captain" icon="images/silk/flag_yellow.gif">
+        <country title="Australia" qtip="Rank 1" checked="true" rank="1"/>
+        <country title="Brazil" qtip="Rank 2" rank="2"/>
+        <country title="Canada" qtip="Rank 3" rank="3"/>
+        <country title="China" qtip="Rank 4" rank="4"/>
+    </team>
+    <team title="Finland" qtip="Team Captain" icon="images/silk/flag_blue.gif">
+        <country title="Germany" qtip="Rank 1" checked="true" rank="1"/>
+        <country title="France" qtip="Rank 2" rank="2"/>
+        <country title="Canada" qtip="Rank 3" rank="3"/>
+        <country title="India" qtip="Rank 4" rank="4"/>
+        <country title="Seychelles" qtip="Rank 5" rank="5"/>
+    </team>
+
+    <team title="Switzerland" qtip="Team Captain" icon="images/silk/flag_green.gif">
+        <country title="United States" qtip="Rank 1" checked="true" rank="1"/>
+        <country title="Japan" qtip="Rank 2" rank="2"/>
+        <country title="Italy" qtip="Rank 3" rank="3"/>
+        <country title="Finland" qtip="Rank 4" rank="4"/>
+    </team>
+</countries>
